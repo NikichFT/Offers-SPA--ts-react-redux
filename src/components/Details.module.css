@@ -1,0 +1,84 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(123, 255, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) */
+}
+.wrapper{
+    width: 60%;
+    height: 70%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.back{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    background-color: rgb(176, 128, 255);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.4s;
+    background-image: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-512.png);
+    background-position: center;
+    background-size: contain;
+    box-shadow: 5px 5px 32px 4px rgba(34, 60, 80, 0.6);
+}
+.back:hover{
+    background-color: rgb(207, 177, 255);
+    box-shadow: 5px 5px 32px 4px rgba(106, 225, 255, 0.6);
+}
+.head{
+    border-bottom: 1px solid grey;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgb(118, 255, 203);
+    border-radius: 20px;
+}
+.type{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+.img{
+    max-width: 125px;
+    max-height: 36px;
+    min-width: 100px;
+}
+
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .back{
+        top: 90%;
+        left: 0;
+    }
+}
+

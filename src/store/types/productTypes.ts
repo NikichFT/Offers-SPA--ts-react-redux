@@ -1,24 +1,67 @@
-export interface ProductState {
+//PRODUCTS
+export interface ProductsState {
     products: any[];
     loading: boolean;
     error: null | string;
 }
 
-export enum ProductActionTypes {
+export enum ProductsActionTypes {
     FETCH_PRODUCTS = 'FETCH_PRODUCTS',
     FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS',
     FETCH_PRODUCTS_FAIL = 'FETCH_PRODUCTS_FAIL',
+    SORT_BY_RATE = 'SORT_BY_RATE',
+    SORT_BY_COST = 'SORT_BY_COST',
+    FILTER_PRODUCTS = 'FILTER_PRODUCTS'
 }
 
 interface FetchProductsAction {
-    type: ProductActionTypes.FETCH_PRODUCTS;
+    type: ProductsActionTypes.FETCH_PRODUCTS;
 }
 interface FetchProductsSuccessAction {
-    type: ProductActionTypes.FETCH_PRODUCTS_SUCCESS;
+    type: ProductsActionTypes.FETCH_PRODUCTS_SUCCESS;
     payload: any[]
 }
 interface FetchProductsFailAction {
-    type: ProductActionTypes.FETCH_PRODUCTS_FAIL;
+    type: ProductsActionTypes.FETCH_PRODUCTS_FAIL;
     payload: string 
 }
-export type ProductAction = FetchProductsAction | FetchProductsSuccessAction | FetchProductsFailAction
+interface SortProductsRateAction {
+    type: ProductsActionTypes.SORT_BY_RATE;
+    payload: any[] 
+}
+interface SortProductsCostAction {
+    type: ProductsActionTypes.SORT_BY_COST;
+    payload: any[] 
+}
+interface FilterProducts {
+    type: ProductsActionTypes.FILTER_PRODUCTS,
+    payload: any[]
+}
+export type ProductsAction = FetchProductsAction | FetchProductsSuccessAction | FetchProductsFailAction | SortProductsRateAction | SortProductsCostAction | FilterProducts
+
+//PRODUCT
+export interface ProductState{
+    product: any;
+    loading: boolean;
+    error: null | string;
+}
+
+export enum ProductActionTypes {
+    FETCH_PRODUCT = 'FETCH_PRODUCT',
+    FETCH_PRODUCT_SUCCESS = 'FETCH_PRODUCT_SUCCESS',
+    FETCH_PRODUCT_FAIL = 'FETCH_PRODUCT_FAIL',
+}
+
+interface FetchProductAction {
+    type: ProductActionTypes.FETCH_PRODUCT;
+}
+interface FetchProductSuccessAction {
+    type: ProductActionTypes.FETCH_PRODUCT_SUCCESS;
+    payload: any
+}
+interface FetchProductFailAction {
+    type: ProductActionTypes.FETCH_PRODUCT_FAIL;
+    payload: string 
+}
+
+export type ProductAction = FetchProductAction | FetchProductSuccessAction | FetchProductFailAction

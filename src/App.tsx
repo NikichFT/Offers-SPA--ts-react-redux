@@ -1,21 +1,16 @@
 import './App.css';
+import Details from './components/Details';
+import MainView from './components/MainView';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path={'/'} exact component = {MainView} />
+        <Route path={'/Details/:id'} exact component = {Details}/>
+        <Redirect to={'/'} />
+      </Switch>  
     </div>
   );
 }

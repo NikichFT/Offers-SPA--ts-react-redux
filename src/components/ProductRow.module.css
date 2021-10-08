@@ -1,0 +1,106 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+}
+.container:hover{
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    min-height: 120px;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    justify-content: space-between;
+    transition: 0.4s;
+    padding: 15px 25px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    max-width: 125px;
+    max-height: 36px;
+    min-width: 100px;
+}
+.org{
+    display: flex;
+    align-items: center;
+    max-width: 110px;
+    min-height: 40px;
+}
+.rate{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.creditAmount{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+.name{
+    font-size: 24px;
+    /* border: 2px solid firebrick; */
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.age{
+    font-size: 14px;
+    text-align: center;
+}
+.licNum{
+    color: gray;
+}
+.details{
+    cursor: pointer;
+    background-color: rgb(47, 255, 158);
+    height: 70px;
+    cursor: pointer;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 300;
+    color: rgb(38, 44, 11);
+    font-size: 18px;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.details:hover{
+    background-color: rgb(218, 155, 255);
+}
+@media screen and (max-width: 425px) {
+    .row{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(128, 128, 128);
+        min-height: 120px;
+        align-items: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        justify-content: space-between;
+        transition: 0.4s;
+        padding: 15px 25px;
+    }
+}

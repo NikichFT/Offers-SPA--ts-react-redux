@@ -1,0 +1,77 @@
+.container{
+    width: 100%;
+    background-color: rgba(156, 42, 201, 0.692);
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0px 5px 30px -5px rgba(34, 60, 80, 0.6) inset;
+}
+.table{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    min-width: 80%;
+    background-color: #fff;
+    box-shadow: 0px 10px 35px 5px rgba(48, 255, 255, 0.479);
+}
+.sort_bar{
+    border: 1px solid rgb(128, 128, 128);
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 10px 0 0 ;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+}
+.option{
+    margin-left: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.option:hover{
+    color: gray;
+}
+.triangle {
+    width: 0;
+	height: 0;
+    margin-left: 5px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid red;
+}
+.button_area{
+    display: flex;
+    justify-content: center;
+}
+.moreButton{
+    background-color: greenyellow;
+    height: 70px;
+    cursor: pointer;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    color: rgb(65, 78, 15);
+    font-size: 18px;
+    transition: .4s;
+}
+.moreButton:hover{
+    background-color: rgb(218, 255, 85);
+}
+@media screen and (max-width: 425px) {
+    .sort_bar{
+        padding: 0;
+    }
+    .table{
+        width: 100%;
+    }
+    .container{
+        padding: 0px;
+    }
+}
