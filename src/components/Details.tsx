@@ -21,19 +21,19 @@ const Details: React.FC = (props: any) => {
         <div className={s.container}>
             <Link to={"/"}><button title="Back" className={s.back}></button></Link>
             {loading && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
-            {product && <div className={s.wrapper}>
+            {product.name && <div className={s.wrapper}>
                 <div className={s.head}>{product.name}</div>
                 <Info 
                 name={product.name} 
                 id={product.id}
-                orgName={product.organization.name}
-                orgLogo={product.organization.logo}
-                rateFrom={product.rate.periods[0].rate.from}
-                creditAmountFrom={product.rate.creditAmount.from}
-                creditAmountTo={product.rate.creditAmount.to}
-                age={product.customerRequirements.age}
-                docAmount={product.customerRequirements.documents}
-                licNum={product.organization.license}
+                orgName={product.organization?.name}
+                orgLogo={product.organization?.logo}
+                rateFrom={product.rate?.periods[0].rate.from}
+                creditAmountFrom={product.rate?.creditAmount.from}
+                creditAmountTo={product.rate?.creditAmount.to}
+                age={product.customerRequirements?.age}
+                docAmount={product.customerRequirements?.documents}
+                licNum={product.organization?.license}
                 />
             </div>}
         </div>
