@@ -1,9 +1,9 @@
 import { Dispatch } from "redux"
 import { fetchProductDetails } from "../../service/fetchProductDetails"
-import { ProductActionTypes } from "../types/productTypes"
+import { ProductAction, ProductActionTypes } from "../types/productTypes"
 
 export const getProduct = (productId: string) => {
-    return async (dispatch: Dispatch<any>) => {
+    return async (dispatch: Dispatch<ProductAction>) => {
         try{
             dispatch({type: ProductActionTypes.FETCH_PRODUCT})
             fetchProductDetails(productId)
